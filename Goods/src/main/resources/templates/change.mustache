@@ -1,0 +1,25 @@
+<html>
+<head>
+    <title>Тестовое задание</title>
+</head>
+<body>
+<button><a href="/"> Вернуться на главную</a></button>
+<form method="post" action="/found">
+    <p>Номер товара<input name="id" required> </p>
+    <button type="submit">Найти</button>
+</form>
+
+{{#result}}
+    <form method="post" action="/change">
+        <p>Номер <input name="id"readonly value="{{id}}"> </p>
+        <p>Название товара<input name="name" readonly value="{{name}}"> </p>
+        <p>Цена <input name="price" readonly value="{{price}}"> </p>
+        <p>Описание <input name="description"  value="{{description}}"> </p>
+        <button type="submit">Изменить</button>
+    </form>
+{{/result}}
+
+{{error}}
+</body>
+
+</html>

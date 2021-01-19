@@ -1,0 +1,30 @@
+<html>
+<head>
+    <title>Тестовое задание</title>
+</head>
+<body>
+<button><a href="/add"> Добавить</a></button>
+<button><a href="/delete">Удалить</a></button>
+<button><a href="/change?id=0">Изменить</a></button>
+<button><a href="/find">Найти</a></button>
+</table>
+<table border="1px solid">
+    <tr>
+        <td>№</td>
+        <td>Название товара</td>
+        <td>Цена товара</td>
+        <td>Описание</td>
+    </tr>
+    {{#goods}}
+        <tr>
+            <td>{{id}}</td>
+            <td>{{name}}</td>
+            <td>{{price}}</td>
+            <td>{{description}}</td>
+        </tr>
+
+    {{/goods}}
+</table>
+</body>
+
+</html>

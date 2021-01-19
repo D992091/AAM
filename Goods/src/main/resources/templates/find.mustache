@@ -1,0 +1,31 @@
+<html>
+<head>
+    <title>Тестовое задание</title>
+</head>
+<body>
+<button><a href="/"> Вернуться на главную</a></button>
+<form method="post" action="/search">
+    <p>Название товара<input name="value" required> </p>
+    <button type="submit">Найти</button>
+</form>
+
+<table border="1px solid">
+    <tr>
+        <td>№</td>
+        <td>Название</td>
+        <td>Цена</td>
+        <td>Описание</td>
+    </tr>
+    {{#goods}}
+        <tr>
+            <td>{{id}}</td>
+            <td>{{name}}</td>
+            <td>{{price}}</td>
+            <td>{{description}}</td>
+        </tr>
+
+    {{/goods}}
+</table>
+</body>
+
+</html>
